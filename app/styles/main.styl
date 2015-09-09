@@ -1,4 +1,284 @@
+/*importando normalize*/
+@import "normalize.styl"
+
+/*importando fuentes de iconos*/
+@font-face {
+	font-family: 'icomoon';
+	src:url('../font/icomoon.eot?jhx2mp');
+	src:url('../font/icomoon.eot?#iefixjhx2mp') format('embedded-opentype'),
+		url('../font/icomoon.ttf?jhx2mp') format('truetype'),
+		url('../font/icomoon.woff?jhx2mp') format('woff'),
+		url('../font/icomoon.svg?jhx2mp#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+	content: "\e600";
+}
+.icon-mail:before {
+	content: "\e601";
+}
+.icon-location:before {
+	content: "\e602";
+}
+.icon-clock:before {
+	content: "\e603";
+}
+.icon-calendar:before {
+	content: "\e604";
+}
+.icon-mobile:before {
+	content: "\e605";
+}
+.icon-plus:before {
+	content: "\e606";
+}
+.icon-play:before {
+	content: "\e607";
+}
+.icon-prev:before {
+	content: "\e608";
+}
+.icon-next:before {
+	content: "\e609";
+}
+.icon-circle-right:before {
+	content: "\e60a";
+}
+.icon-gp:before {
+	content: "\e60b";
+}
+.icon-fb:before {
+	content: "\e60c";
+}
+.icon-tt:before {
+	content: "\e60d";
+}
+.icon-fli:before {
+	content: "\e60e";
+}
+.icon-tum:before {
+	content: "\e60f";
+}
+.icon-lk:before {
+	content: "\e610";
+}
+.icon-pin:before {
+	content: "\e611";
+}
+
+
+/*Declarando variables*/
+_white=#ffffff
+_cleargreen=#21B44E
+_darkgreen=#1C9845
+_clearblue=#252F38
+_darkblue=#1A2127
+_darkbluemore=#202A32
+_sky-blue=#D6EBF0
+_clearbluemore=#849BAE
+
+
+a
+	text-decoration none
+figure
+	margin 0
+	overflow hidden
+
+h1,h2,h3,h4
+	margin 0
+
+p
+	margin 0
+ul
+	list-style none
+	margin 0
+	padding 0
+
+.d-none
+	display none
+
+.general-container
+	max-width 73em
+	position relative
+	margin-right auto
+	margin-left auto
+.long-container
+	width	93.75em
+	position relative
+	margin-right auto
+	margin-left auto
+
 body
-	background-color blue
-	font-size 16px
-	margin 16px		
+	font-family: 'Open Sans', sans-serif;
+
+.header__data
+	background-color _darkblue
+	.content-header-data
+		display table
+		width 100%
+		font-size 0
+		height 3.25rem
+		.data
+			display table-cell
+			width 71%
+			vertical-align middle
+			ul li
+				display inline-block
+				a
+					color _white
+					font-size .8rem
+					padding 1rem 1.5rem
+					span
+						padding-right 1rem
+						color _clearbluemore
+					&:hover
+						background-color _cleargreen
+						span
+							color _clearblue
+		.networks
+			display table-cell
+			width 27%
+			vertical-align middle
+			ul li
+				display inline-block
+				a
+					color _sky-blue
+					font-size 1rem
+					padding 1rem 1.5rem
+					&:hover
+						background-color _cleargreen
+						span
+							color _clearblue
+.header__nav
+	background-color _clearblue
+	.content-header-nav
+		display table
+		width 100%
+		font-size 0
+		height 6.85rem
+		.seeker
+			display table-cell
+			width 47%
+			vertical-align middle
+			font-size 1rem
+		.nav
+			display table-cell
+			width 80%
+			vertical-align middle
+			ul li
+				display inline-block
+				border-left 1px solid _darkblue
+				&:last-child
+					border-right 1px solid _darkblue
+				a
+					font-size 1rem
+					display block
+					color _white
+					padding	2.6rem 1.5rem
+					text-transform uppercase
+					&:hover
+						background-color _cleargreen
+.slider
+	width 100%
+	height	37.5em
+	background _sky-blue
+.invitation
+	background-image url("../img/bg.jpg")
+	padding 2em 0
+	text-align center
+	&__title
+		font-size 1em
+		font-weight 700
+		padding-bottom 1em
+	&__text
+		padding-bottom 2em
+	&__link a
+		padding	1em 1.5em
+		background-color _cleargreen
+		color _white
+		border-radius 5px
+
+.info-structure__head
+	border-bottom 1px solid _clearblue
+	font-size 0
+	position relative
+	.title
+		font-size 1.5rem
+		font-weight 600
+		display inline-block
+		padding-bottom 1rem
+	.navigation-options
+		position absolute
+		right 0
+		bottom .5rem
+		font-size 1rem
+		display inline-block
+		a
+			font-size .8rem
+			color _clearblue
+			padding .3rem .7rem
+			border 1px solid _clearblue
+		.arrows
+			display inline-block
+
+.content-pag
+	padding 5em 0
+	.info-structure__body
+		font-size 0
+		text-align center
+		.new-classes
+			display inline-block
+			width 23%
+			margin-right 1.9rem
+			max-height	17rem
+			padding .5rem 0
+			&:last-child
+				margin-right 0
+			&__img
+				background-color _darkblue
+				height 12.5rem
+			&__title
+				background-color _darkbluemore
+				color _sky-blue
+				font-size 1.5rem
+				text-transform uppercase
+				padding 1rem 0
+		.featured-classes
+			border 1px solid red
+			display inline-block
+			width 31%
+			margin-right 2.3rem
+			max-height	17rem
+			padding .5rem 0
+			position relative
+			&:last-child
+				margin-right 0
+			&__icon
+				width 4.3rem
+				height 4.3rem
+				background-color _cleargreen
+				display inline-block
+				position absolute
+				width 20%
+				top 0
+				left 0
+			&__details
+				font-size 1rem
+				display inline-block
+				width 80%
