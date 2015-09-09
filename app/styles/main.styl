@@ -214,40 +214,40 @@ body
 		color _white
 		border-radius 5px
 
-.info-structure__head
-	border-bottom 1px solid _clearblue
-	font-size 0
-	position relative
-	.title
-		font-size 1.5rem
-		font-weight 600
-		display inline-block
-		padding-bottom 1rem
-	.navigation-options
-		position absolute
-		right 0
-		bottom .5rem
-		font-size 1rem
-		display inline-block
-		a
-			font-size .8rem
-			color _clearblue
-			padding .3rem .7rem
-			border 1px solid _clearblue
-		.arrows
+.info-structure
+	padding-bottom 3rem
+	.info-structure__head
+		border-bottom 1px solid _clearblue
+		font-size 0
+		margin-bottom 1rem
+		position relative
+		.title
+			font-size 1.5rem
+			font-weight 600
 			display inline-block
+			padding-bottom 1rem
+		.navigation-options
+			position absolute
+			right 0
+			bottom .5rem
+			font-size 1rem
+			display inline-block
+			a
+				font-size .8rem
+				color _clearblue
+				padding .3rem .7rem
+				border 1px solid _clearblue
+			.arrows
+				display inline-block
 
-.content-pag
-	padding 5em 0
+
 	.info-structure__body
 		font-size 0
-		text-align center
 		.new-classes
 			display inline-block
 			width 23%
 			margin-right 1.9rem
 			max-height	17rem
-			padding .5rem 0
 			&:last-child
 				margin-right 0
 			&__img
@@ -258,15 +258,14 @@ body
 				color _sky-blue
 				font-size 1.5rem
 				text-transform uppercase
+				text-align center
 				padding 1rem 0
 		.featured-classes
-			border 1px solid red
 			display inline-block
+			overflow hidden
 			width 31%
-			margin-right 2.3rem
+			margin-right 2.5rem
 			max-height	17rem
-			padding .5rem 0
-			position relative
 			&:last-child
 				margin-right 0
 			&__icon
@@ -274,11 +273,32 @@ body
 				height 4.3rem
 				background-color _cleargreen
 				display inline-block
-				position absolute
-				width 20%
-				top 0
+				position relative
+				top -3.5rem
 				left 0
+				margin-right 1.5rem
 			&__details
 				font-size 1rem
 				display inline-block
-				width 80%
+				width 70%
+				text-align left
+				.featured-classes__title
+					font-size 1.2rem
+					padding-bottom .5rem
+				.featured-classes__description
+					font-size .8rem
+					line-height 1.5rem
+				.featured-classes__link
+					font-size .9rem
+					padding-top 0.5rem
+					a
+						color _cleargreen
+		.sponsors .sponsor
+			display inline-block
+			width 17%
+			height 5rem
+			margin-right 2.73rem
+			background-color _cleargreen
+			&:last-child
+				margin-right 0
+		
