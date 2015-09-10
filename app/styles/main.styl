@@ -51,11 +51,11 @@
 .icon-play:before {
 	content: "\e607";
 }
-.icon-prev:before {
-	content: "\e608";
+.icon-left:before {
+	content: "\e612";
 }
-.icon-next:before {
-	content: "\e609";
+.icon-right:before {
+	content: "\e613";
 }
 .icon-circle-right:before {
 	content: "\e60a";
@@ -87,12 +87,18 @@
 _white=#ffffff
 _cleargreen=#21B44E
 _darkgreen=#1C9845
+_darkgreenmore=#0A6726
 _clearblue=#252F38
 _darkblue=#1A2127
 _darkbluemore=#202A32
 _sky-blue=#D6EBF0
 _clearbluemore=#849BAE
+_clearbluefonttitle=#7F95A7
+_border-sponsor=#CDD1D0
+_clear-black=#F6F6F6
 
+.c-green
+	color _cleargreen
 
 a
 	text-decoration none
@@ -100,7 +106,7 @@ figure
 	margin 0
 	overflow hidden
 
-h1,h2,h3,h4
+h1,h2,h3,h4,h5
 	margin 0
 
 p
@@ -144,13 +150,17 @@ body
 					color _white
 					font-size .8rem
 					padding 1rem 1.5rem
+					text-shadow 0.1em 0.1em 0.05em #222
 					span
 						padding-right 1rem
 						color _clearbluemore
+						font-size 1rem
 					&:hover
 						background-color _cleargreen
 						span
-							color _clearblue
+							color _darkgreenmore
+							text-shadow none
+
 		.networks
 			display table-cell
 			width 27%
@@ -161,10 +171,12 @@ body
 					color _sky-blue
 					font-size 1rem
 					padding 1rem 1.5rem
+					text-shadow 0.1em 0.1em 0.05em #222
 					&:hover
 						background-color _cleargreen
 						span
-							color _clearblue
+							color _darkgreenmore
+							text-shadow 0.1em 0.1em 0.5em #EEE
 .header__nav
 	background-color _clearblue
 	.content-header-nav
@@ -172,11 +184,15 @@ body
 		width 100%
 		font-size 0
 		height 6.85rem
-		.seeker
+		.logo-company
 			display table-cell
-			width 47%
-			vertical-align middle
 			font-size 1rem
+			width 48%
+			vertical-align middle
+			figure
+				height 4rem
+				width 18rem
+				background-color _white
 		.nav
 			display table-cell
 			width 80%
@@ -190,14 +206,21 @@ body
 					font-size 1rem
 					display block
 					color _white
-					padding	2.6rem 1.5rem
+					padding	2.6rem 1.4rem
 					text-transform uppercase
+					font-weight 700
 					&:hover
 						background-color _cleargreen
+						text-shadow 0.1em 0.1em 0.05em #555
 .slider
 	width 100%
 	height	37.5em
 	background _sky-blue
+.slider--classes
+	width 100%
+	height	13.5em
+	background _sky-blue
+
 .invitation
 	background-image url("../img/bg.jpg")
 	padding 2em 0
@@ -213,104 +236,256 @@ body
 		background-color _cleargreen
 		color _white
 		border-radius 5px
+		font-weight bold
 
-.info-structure
-	padding-bottom 3rem
-	.info-structure__head
-		border-bottom 1px solid _clearblue
-		font-size 0
-		margin-bottom 1rem
-		position relative
-		.title
-			font-size 1.5rem
-			font-weight 600
-			display inline-block
-			padding-bottom 1rem
-		.navigation-options
-			position absolute
-			right 0
-			bottom .5rem
-			font-size 1rem
-			display inline-block
-			a
-				font-size .8rem
-				color _clearblue
-				padding .3rem .7rem
-				border 1px solid _clearblue
-			.arrows
-				display inline-block
-
-
-	.info-structure__body
-		font-size 0
-		.new-classes
-			display inline-block
-			width 23%
-			margin-right 1.9rem
-			max-height	17rem
-			&:last-child
-				margin-right 0
-			&__img
-				background-color _darkblue
-				height 12.5rem
-			&__title
-				background-color _darkbluemore
-				color _sky-blue
+.content-pag
+	margin-top 3em
+	.info-structure
+		padding-bottom 3rem
+		&__head
+			border-bottom 1px solid _clearblue
+			font-size 0
+			margin-bottom 1rem
+			position relative
+			.title
 				font-size 1.5rem
-				text-transform uppercase
-				text-align center
-				padding 1rem 0
-		.featured-classes
-			display inline-block
-			overflow hidden
-			width 31%
-			margin-right 2.5rem
-			max-height	17rem
-			&:last-child
-				margin-right 0
-			&__icon
-				width 4.3rem
-				height 4.3rem
-				background-color _cleargreen
+				font-weight 600
 				display inline-block
-				position relative
-				top -3.5rem
-				left 0
-				margin-right 1.5rem
-			&__details
+				padding-bottom 1rem
+			.navigation-options
+				position absolute
+				right 0
+				bottom .5rem
 				font-size 1rem
 				display inline-block
-				width 70%
-				text-align left
-				.featured-classes__title
-					font-size 1.2rem
-					padding-bottom .5rem
-				.featured-classes__description
+				a
 					font-size .8rem
-					line-height 1.5rem
-				.featured-classes__link
-					font-size .9rem
-					padding-top 0.5rem
+					color _clearblue
+					padding .3rem .7rem
+					border 1px solid _clearblue
+				.arrows
+					display inline-block
 					a
-						color _cleargreen
-		.sponsors .sponsor
-			display inline-block
-			width 17%
-			height 5rem
-			margin-right 2.73rem
-			background-color _cleargreen
-			&:last-child
-				margin-right 0
+						border 0
+						padding-left .5rem
+						padding-right 0
+						color _sky-blue
+						&:hover
+							color _darkgreen
+			.line-green
+				position absolute
+				width 3rem
+				height 3px
+				bottom -2px
+				background-color _cleargreen
+		&__options
+			font-size 0
+			padding 2rem 0
+			ul li
+				display inline-block
+				a
+					border 2px solid _border-sponsor
+					border-radius 3px
+					color _clearbluemore
+					padding .2rem .5rem
+					font-size .8rem
+					font-weight 700
+					margin-right .8rem
+					text-transform uppercase
+					&:hover
+						border 2px solid _darkgreen
+						background-color _darkgreen
+						color _white
+		&__body
+			font-size 0
+			.new-classes
+				display inline-block
+				width 23%
+				margin-right 1.9rem
+				max-height	17rem
+				&:last-child
+					margin-right 0
+				&__img
+					background-color _darkblue
+					height 12.5rem
+				&__title
+					background-color _darkbluemore
+					color _clearbluemore
+					font-size 1.5rem
+					text-transform uppercase
+					text-align center
+					padding 1rem 0
+			.featured-classes
+				display inline-block
+				overflow hidden
+				width 31%
+				margin-right 2.5rem
+				max-height	17rem
+				&:last-child
+					margin-right 0
+				&__icon
+					width 4.3rem
+					height 4.3rem
+					background-color _darkgreen
+					display inline-block
+					position relative
+					top -3.5rem
+					left 0
+					margin-right 1.5rem
+				&__details
+					font-size 1rem
+					display inline-block
+					width 70%
+					text-align left
+					.featured-classes__title
+						font-size 1.2rem
+						padding-bottom .5rem
+					.featured-classes__description
+						font-size .8rem
+						line-height 1.5rem
+					.featured-classes__link
+						font-size .9rem
+						padding-top 0.5rem
+						a
+							color _cleargreen
+			.club-classes
+				display inline-block
+				width 31.5%
+				margin-right 1.9rem
+				margin-bottom 3rem
+				border-bottom 2px solid _border-sponsor
+				text-align center
+				&:nth-child(3n+3)
+					margin-right 0
+				&__img
+					background-color _clear-black
+					height 19rem
+					border-bottom 2px solid _border-sponsor
+				&__title
+					font-size 1rem
+					margin-top 1rem
+				&__teacher
+					font-size .8rem
+					padding .5rem 0
+
+			.sponsors
+				text-align center
+				a
+					margin-right 2.1rem
+				.sponsor
+					display inline-block
+					width 17.35%
+					height 5rem
+					background-color _white
+					border 2px solid _border-sponsor
+					vertical-align top
+					&:hover
+						border 2px solid _cleargreen
+					&:last-child
+						margin-right 0
+					&__logo figure
+						margin-top 1rem
+						width 80%
+							img
+								width 100%
+								border 1px solid blue
 
 .about-company
 	background-color _darkblue
-	padding 2rem 0
-	font-size 0
-	.general-container .about
+	padding 1.5rem 0
+	text-align center
+	.about
 		display inline-block
-		width 30px
+		text-align left
+		vertical-align top
+		width 23%
 		margin-right 1rem
 		font-size 1rem
-		border 1px solid red
 		&:last-child
 			margin-right 0
+		&__title
+			color _clearbluefonttitle
+			font-weight 700
+			font-size 2rem
+			padding 1rem 0
+		&__content
+			color _white
+			font-size 0.8rem
+			font-weight 400
+			line-height 1.5rem
+			.data-contac
+				margin-top 1.5	rem
+				li
+					padding-bottom .8rem
+				span
+					margin-right 1rem
+
+			.links li
+				padding-bottom 1.5rem
+				padding-top .5rem
+				border-bottom 1px solid _clearblue
+				&:first-child
+					padding-top 0
+				a
+					color _white
+					&:hover
+						color _cleargreen
+				span
+					margin-right 1rem
+			.form-about
+				padding-top 1rem
+				input
+					margin-bottom .7rem
+				.inputt
+					width 100%
+					line-height 2rem
+					color _white
+					background-color _darkbluemore
+					border 0
+				.but
+					width 60%
+					color _white
+					background-color _cleargreen
+					padding .7rem 1rem
+					font-size .9rem
+					font-weight 700
+					border 0
+			.about-networks
+				margin-top 1rem
+				ul li
+					display inline-block
+					border 2px solid _cleargreen
+					margin-right 0.4rem
+					background-color _cleargreen
+					a
+						color _white
+						padding 0.4rem
+					&:last-child
+						margin-right 0
+					&:hover
+						background-color _darkblue
+						a
+							color _cleargreen
+.footer
+	background-color _clearblue
+	padding 1rem 0
+	&__author, &__nav
+		display inline-block
+		font-size 0
+		font-size .8rem
+	&__author
+		width 53.8%
+		color _white
+	&__nav
+		width 45.5%
+		ul li
+			display inline-block
+			border-right 1px solid _sky-blue
+			&:last-child
+				border-right 0
+
+			a
+				color _white
+				padding 0 1.5rem
+				&:hover
+					color _cleargreen
