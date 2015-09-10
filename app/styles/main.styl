@@ -96,6 +96,12 @@ _clearbluemore=#849BAE
 _clearbluefonttitle=#7F95A7
 _border-sponsor=#CDD1D0
 _clear-black=#F6F6F6
+_bg-title-pag=#40494F
+_arrows=#D6DAD9
+_arrows-hover=#47AB68
+_bgc-input=#1D232A
+_bg-about=#212B35
+_sombra=#999
 
 .c-green
 	color _cleargreen
@@ -132,94 +138,116 @@ ul
 
 body
 	font-family: 'Open Sans', sans-serif;
+.header
+	border-bottom 2px solid _sombra
+	.header__data
+		background-color _darkblue
+		.content-header-data
+			display table
+			width 100%
+			font-size 0
+			height 3.25rem
+			.data
+				display table-cell
+				width 71%
+				vertical-align middle
+				ul li
+					display inline-block
+					a
+						color _white
+						font-size .8rem
+						padding 1rem 1.5rem
+						text-shadow 0.1em 0.1em 0.05em #222
+						span
+							padding-right 1rem
+							color _clearbluemore
+							font-size 1rem
+						&:hover
+							background-color _cleargreen
+							span
+								color _darkgreenmore
+								text-shadow none
 
-.header__data
-	background-color _darkblue
-	.content-header-data
-		display table
-		width 100%
-		font-size 0
-		height 3.25rem
-		.data
-			display table-cell
-			width 71%
-			vertical-align middle
-			ul li
-				display inline-block
-				a
-					color _white
-					font-size .8rem
-					padding 1rem 1.5rem
-					text-shadow 0.1em 0.1em 0.05em #222
-					span
-						padding-right 1rem
-						color _clearbluemore
+			.networks
+				display table-cell
+				width 27%
+				vertical-align middle
+				ul li
+					display inline-block
+					a
+						color _sky-blue
 						font-size 1rem
-					&:hover
-						background-color _cleargreen
-						span
-							color _darkgreenmore
-							text-shadow none
-
-		.networks
-			display table-cell
-			width 27%
-			vertical-align middle
-			ul li
-				display inline-block
-				a
-					color _sky-blue
-					font-size 1rem
-					padding 1rem 1.5rem
-					text-shadow 0.1em 0.1em 0.05em #222
-					&:hover
-						background-color _cleargreen
-						span
-							color _darkgreenmore
-							text-shadow 0.1em 0.1em 0.5em #EEE
-.header__nav
-	background-color _clearblue
-	.content-header-nav
-		display table
-		width 100%
-		font-size 0
-		height 6.85rem
-		.logo-company
-			display table-cell
-			font-size 1rem
-			width 48%
-			vertical-align middle
-			figure
-				height 4rem
-				width 18rem
-				background-color _white
-		.nav
-			display table-cell
-			width 80%
-			vertical-align middle
-			ul li
-				display inline-block
-				border-left 1px solid _darkblue
-				&:last-child
-					border-right 1px solid _darkblue
-				a
-					font-size 1rem
-					display block
-					color _white
-					padding	2.6rem 1.4rem
-					text-transform uppercase
-					font-weight 700
-					&:hover
-						background-color _cleargreen
-						text-shadow 0.1em 0.1em 0.05em #555
+						padding 1rem 1.5rem
+						text-shadow 0.1em 0.1em 0.05em #222
+						&:hover
+							background-color _cleargreen
+							span
+								color _darkgreenmore
+								text-shadow 0.1em 0.1em 0.5em #EEE
+	.header__nav
+		background-color _clearblue
+		.content-header-nav
+			display table
+			width 100%
+			font-size 0
+			height 6.85rem
+			.logo-company
+				display table-cell
+				font-size 1rem
+				width 48%
+				vertical-align middle
+				figure
+					height 4rem
+					width 18rem
+					background-color _white
+			.nav
+				display table-cell
+				width 80%
+				vertical-align middle
+				ul li
+					display inline-block
+					border-left 1px solid _darkblue
+					&:last-child
+						border-right 1px solid _darkblue
+					a
+						font-size 1rem
+						display block
+						color _white
+						padding	2.75rem 1.4rem
+						text-transform uppercase
+						font-weight 700
+						&:hover
+							background-color _cleargreen
+							text-shadow 0.1em 0.1em 0.05em #555
 .slider
 	width 100%
 	height	37.5em
 	background _sky-blue
 .slider--classes
 	width 100%
-	height	13.5em
+	height	6em
 	background _sky-blue
+	padding 3.5em 0
+	.container-slider
+		text-transform uppercase
+		&__title
+			display table
+			background-color _bg-title-pag
+			padding .5em .8em
+			color _cleargreen
+		&__rutas
+			background-color _bg-title-pag
+			margin-top 1.5em
+			display table
+			padding .3em 1em
+			font-size .7em
+			a
+				color _white
+				font-weight 700
+			span
+				margin 0 .3em
+				color _cleargreen
+
 
 .invitation
 	background-image url("../img/bg.jpg")
@@ -266,7 +294,7 @@ body
 	.info-structure
 		padding-bottom 3rem
 		&__head
-			border-bottom 1px solid _clearblue
+			border-bottom 1px solid _border-sponsor
 			font-size 0
 			margin-bottom 1rem
 			position relative
@@ -292,9 +320,9 @@ body
 						border 0
 						padding-left .5rem
 						padding-right 0
-						color _sky-blue
+						color _arrows
 						&:hover
-							color _darkgreen
+							color _arrows-hover
 			.line-green
 				position absolute
 				width 3rem
@@ -409,7 +437,7 @@ body
 					.classes__img
 						background-color _darkgreen
 					.containers-details-classes
-						padding 1rem
+						padding 1rem 1rem 1.5rem 1rem
 						text-align left
 						font-size 1rem
 						border-right 1px solid _border-sponsor
@@ -435,14 +463,10 @@ body
 								border 2px solid _darkgreen
 								background-color _darkgreen
 								color _white
+								border-radius 2px
 								&:hover
 									background-color _white
 									color _darkgreen
-
-
-
-
-
 
 			.sponsors
 				text-align center
@@ -451,25 +475,30 @@ body
 				.sponsor
 					display inline-block
 					width 17.35%
-					height 5rem
 					background-color _white
 					border 2px solid _border-sponsor
 					vertical-align top
 					&:hover
-						border 2px solid _cleargreen
+						border 2px solid _darkgreen
 					&:last-child
 						margin-right 0
-					&__logo figure
-						margin-top 1rem
-						width 80%
-							img
-								width 100%
-								border 1px solid blue
+					&__logo
+						height 5rem
+						figure
+							position relative
+							top 50%
+							transform translateY(-50%)
+							width 80%
+								img
+									width 100%
+									max-height 70px
+									border 1px solid blue
 
 .about-company
-	background-color _darkblue
-	padding 1.5rem 0
+	background-color _bg-about
+	padding 2rem 0 4rem
 	text-align center
+	border-bottom 1px solid _darkblue
 	.about
 		display inline-block
 		text-align left
@@ -482,7 +511,7 @@ body
 		&__title
 			color _clearbluefonttitle
 			font-weight 700
-			font-size 2rem
+			font-size 1.7rem
 			padding 1rem 0
 		&__content
 			color _white
@@ -515,9 +544,10 @@ body
 				.inputt
 					width 100%
 					line-height 2rem
-					color _white
-					background-color _darkbluemore
+					background-color _bgc-input
 					border 0
+					padding-left .5rem
+					font-style italic
 				.but
 					width 60%
 					color _white
@@ -526,16 +556,20 @@ body
 					font-size .9rem
 					font-weight 700
 					border 0
+					text-shadow 0.1em 0.1em 0.05em #666
 			.about-networks
 				margin-top 1rem
 				ul li
 					display inline-block
 					border 2px solid _cleargreen
-					margin-right 0.4rem
+					margin-right 0.3rem
 					background-color _cleargreen
+					padding 0.3rem
+					border-radius 2px
 					a
 						color _white
-						padding 0.4rem
+						// padding 1rem 0.2rem
+						font-size 1rem
 					&:last-child
 						margin-right 0
 					&:hover
