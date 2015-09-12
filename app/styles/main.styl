@@ -27,6 +27,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-left:before {
+	content: "\e612";
+}
+.icon-right:before {
+	content: "\e613";
+}
 .icon-phone:before {
 	content: "\e600";
 }
@@ -45,20 +51,32 @@
 .icon-mobile:before {
 	content: "\e605";
 }
+.icon-alert:before {
+	content: "\e608";
+}
 .icon-plus:before {
 	content: "\e606";
+}
+.icon-minus:before {
+	content: "\e615";
+}
+.icon-cross:before {
+	content: "\e609";
+}
+.icon-check:before {
+	content: "\e614";
 }
 .icon-play:before {
 	content: "\e607";
 }
-.icon-left:before {
-	content: "\e612";
-}
-.icon-right:before {
-	content: "\e613";
-}
 .icon-circle-right:before {
 	content: "\e60a";
+}
+.icon-radio-checked2:before {
+	content: "\e616";
+}
+.icon-radio-unchecked:before {
+	content: "\e617";
 }
 .icon-gp:before {
 	content: "\e60b";
@@ -137,7 +155,7 @@ ul
 	margin-left auto
 
 body
-	font-family: 'Open Sans', sans-serif;
+	font-family 'Open Sans', sans-serif
 .header
 	border-bottom 2px solid _sombra
 	.header__data
@@ -329,6 +347,8 @@ body
 				height 3px
 				bottom -2px
 				background-color _cleargreen
+		.info-structure__head--sbb
+			border-bottom 0
 		&__options
 			font-size 0
 			padding 2rem 0
@@ -467,6 +487,427 @@ body
 								&:hover
 									background-color _white
 									color _darkgreen
+
+				.rows
+					border 0px solid blue
+					margin-bottom 2rem
+					.rows__title
+						font-size 1.3rem
+						margin-bottom 1rem
+					.rows__body
+						border 0px solid red
+						.columns
+							border 0px solid green
+							.columns-2, .columns-3, .columns-4
+								display inline-block
+								vertical-align top
+								text-align center
+							.columns-2
+								width 49%
+								margin-right 2%
+								&:last-child
+									margin-right 0
+							.columns-3
+								width 32%
+								text-align left
+								margin-right 2%
+								&:last-child
+									margin-right 0
+							.columns-3--20
+								width 25%
+							.columns-3--40
+								width 35%
+							.columns-3--25
+								width 24%
+							.columns-3--50
+								width 47%
+							.columns-4
+								width 23%
+								margin-right 2.5%
+								&:last-child
+									margin-right 0
+						.acordeon
+							width 35rem
+							height 20rem
+							background-color #457854
+						.bottoms
+							text-transform uppercase
+							text-align left
+							margin-top 2rem
+							&__left, &__right
+								display inline-block
+								width 32%
+								a
+									padding .5rem .8rem
+									font-weight 600
+									font-size .8rem
+									display table
+									border-radius 3px
+									margin-bottom 1rem
+									margin 1rem auto
+								.bottoms-mediun
+									padding .4rem .6rem
+								.bottoms-small
+									padding .2rem 1rem
+							&__left
+								margin-right .5rem
+								a
+									color _white
+									background-color _darkgreen
+									border 2px solid _darkgreen
+							&__right
+								a
+									color _darkgreen
+									background-color _white
+									border 2px solid _darkgreen
+
+
+
+						.tabs-1
+							width 35.5rem
+							height 16.5rem
+							background-color #454545
+							margin-bottom 1rem
+						.tabs-2
+							width 35.5rem
+							height 16.5rem
+							background-color #785854
+						.messages
+							color _white
+							margin-bottom 1rem
+							&__text, &__icon
+								display inline-block
+							&__text
+								width 85%
+								text-align left
+								padding 0 .7rem
+								p
+									font-size 1rem
+							&__icon
+								width 10%
+								span
+									font-size .7rem
+									border 1px solid _white
+									padding .3rem
+						.messages--succes, .messages--error, .messages--information, .messages--warning
+							padding .7rem 0
+						.messages--succes
+							background-color #72B43C
+						.messages--error
+							background-color #E72A2A
+						.messages--information
+							background-color #3C83B4
+						.messages--warning
+							background-color #D2B930
+
+						.headers
+							font-size 1rem
+							.headers__title
+								margin-bottom 1.2rem
+								font-size 1.3rem
+						.text-box
+							font-size 1rem
+							.text-box__title
+								margin-bottom 1.2rem
+								font-size 1.3rem
+							.text-box__content
+								font-size .8rem
+								line-height 1.5rem
+						.progress-bars
+							font-size 1rem
+							.progress-bars__title
+								margin-bottom 1.2rem
+								font-size 1.3rem
+							.progress-bars__content
+								color _white
+								ul li
+									margin-bottom 1rem
+									p
+										background-color _darkgreen
+									.s10, .s20, .s50
+										background-color #DDDDDD
+										width 23px
+								.noventa, .ochenta, .cincuenta
+									background-color _darkgreen
+									border-radius 3px
+									overflow hidden
+									position relative
+									.text, .s10, .s20, .s50
+										display inline-block
+										font-size 0
+										vertical-align middle
+									.text
+										font-size 1rem
+										font-weight 700
+										padding .7rem 0 .7rem 1rem
+									.s10, .s20, .s50
+										position absolute
+										right 0
+										height 44px
+									.s10
+										width 35px
+									.s20
+										width 60px
+									.s50
+										width 180px
+
+						.witness
+							font-size 1rem
+							&__text
+								p
+									padding 1.5rem
+									font-size .8rem
+									line-height 1.6rem
+									position relative
+
+								.picture
+									width 5.5rem
+									height 5.4rem
+									background-color _darkgreen
+									display inline-block
+									margin-left 1.5rem
+									vertical-align middle
+								p::after
+									content ""
+									width 0
+									height 0
+									position absolute
+									border-right 18px solid transparent
+									border-bottom 11px solid transparent
+								p::before
+									content ""
+									width 0
+									height 0
+									position absolute
+									border-right 18px solid transparent
+									border-bottom 11px solid transparent
+
+							.tipo-1, .tipo-2, .tipo-3
+								border-radius 4px
+							.tipo-1
+								border 2px solid #252F38
+								p::after
+									border-left 15px solid _white
+									border-top 10px solid _white
+									bottom -20px
+									left 60px
+									z-index 1
+								p::before
+									border-top 11px solid black
+									border-left 15px solid black
+									left 58px
+									bottom -24px
+
+							.tipo-2
+								border 2px solid _darkgreen
+								p
+									display inline-block
+									width 50%
+									vertical-align middle
+								p::after
+									border-left 15px solid _white
+									border-top 10px solid _white
+									bottom -20px
+									left -53px
+									z-index 1
+								p::before
+									border-top 11px solid _darkgreen
+									border-left 15px solid _darkgreen
+									position absolute
+									left -55px
+									bottom -24px
+
+							.tipo-3
+								border 2px solid #252F38
+								background-color #252F38
+								color _white
+								p
+									display inline-block
+									width 50%
+									vertical-align middle
+								p::after
+									border-left 17px solid #252F38
+									border-top 12px solid #252F38
+									bottom -20px
+									left -53px
+									z-index 1
+							&__author
+								margin-top 2rem
+								h4
+									color _cleargreen
+									text-transform uppercase
+									font-size .7rem
+						.pricing-table
+							font-size 1rem
+							&__head
+								padding 1rem
+								background-color _darkgreen
+								color _white
+								h3
+									font-weight 300
+									margin-bottom .3rem
+								.big
+									font-size 3rem
+							&__body
+								border 1px solid _border-sponsor
+								ul li
+									border-bottom 1px solid _border-sponsor
+									padding 1.3rem 0
+									&:last-child
+										border-bottom 0
+							&__footer
+								background-color _darkgreen
+								a
+									padding 1.8rem
+									display block
+									text-transform uppercase
+									color _white
+									text-shadow 0.1rem 0.1rem 0.1rem #777
+									font-weight 600
+								&:hover
+									background-color _bg-about
+									a
+										text-shadow 0.1rem 0.1rem 0.1rem transparent
+
+						.paragraph-divisions
+							&__title
+								font-size 1.5rem
+								margin-bottom .5rem
+							&__content
+								font-size 0
+								line-height 1.5rem
+								margin-bottom 2rem
+								p
+									font-size .8rem
+								.paragraph-2
+									display inline-block
+									width 50%
+								.tipo-1
+									width 67%
+									margin-right .5rem
+								.tipo-2
+									width 32%
+								.tipo-3
+									width 73%
+									margin-right 3rem
+								.tipo-4
+									width 22%
+								.paragraph-4
+									display inline-block
+									width 24%
+									margin-right 1%
+									&:last-child
+										margin-right 0
+								.paragraph-3
+									display inline-block
+									width 32%
+									margin-right 2%
+									&:last-child
+										margin-right 0
+
+						.dropcaps
+							font-size 1rem
+							text-align left
+							&__head
+								font-size 1.5rem
+								padding-bottom .8rem
+							&__body
+								font-size .8rem
+								line-height 1.5rem
+								.capital
+									float left
+									font-size 3rem
+									position relative
+									color _darkgreen
+									top 10px
+									margin-right .5rem
+									line-height 30px
+
+						.highlight
+							font-size 1rem
+							text-align left
+							&__head
+								font-size 1.5rem
+								padding-bottom .8rem
+							&__body
+								font-size .8rem
+								line-height 1.5rem
+								.bc-green
+									background-color _darkgreen
+									color _white
+									padding 0 .15rem
+								.subrayado
+									color _darkgreen
+									border-bottom 1px solid _darkgreen
+								.bc-black
+									background-color black
+									color _white
+									padding 0 .15rem
+								.bc-gray
+									background-color #849BAE
+									color _white
+									padding 0 .15rem
+								.c-green
+									color _darkgreen
+
+						.social-icons
+							font-size 1rem
+							&__head
+								font-size 1.5rem
+								padding-bottom .8rem
+							ul
+								margin-bottom .8rem
+								li
+									display inline-block
+									border 2px solid _cleargreen
+									margin-right 0.3rem
+									background-color _cleargreen
+									padding 0.3rem
+									border-radius 2px
+									a
+										color _white
+										font-size 1rem
+									&:last-child
+										margin-right 0
+									&:hover
+										background-color _white
+										a
+											color _cleargreen
+						.tags
+							font-size 1rem
+							&__head
+								font-size 1.5rem
+								padding-bottom .8rem
+							&__body
+								ul
+									margin-bottom 1.8rem
+									li
+										display inline-block
+										margin-right .3rem
+									a
+										background-color #849BAE
+										color _white
+										font-size .8rem
+										padding .7rem .5rem
+										border-radius 2px
+										&:hover
+											background-color _darkgreen
+						.iconn-list
+							font-size 1rem
+							&__head
+								font-size 1.5rem
+								padding-bottom .8rem
+							&__body
+								.left, .right
+									display inline-block
+									width 49%
+									ul li
+										font-size .9rem
+										margin-bottom .5rem
+										span
+											color _darkgreen
+											font-size .5rem
+											margin-right .5rem
 
 			.sponsors
 				text-align center
