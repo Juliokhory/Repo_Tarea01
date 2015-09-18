@@ -27,10 +27,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-left:before {
+.icon-arrow-left:before {
 	content: "\e612";
 }
-.icon-right:before {
+.icon-arrow-right:before {
 	content: "\e613";
 }
 .icon-phone:before {
@@ -323,7 +323,7 @@ body
 			margin-bottom 1rem
 			position relative
 			.title
-				font-size 1.5rem
+				font-size 2rem
 				font-weight 600
 				display inline-block
 				padding-bottom 1rem
@@ -428,6 +428,157 @@ body
 						padding-top 0.5rem
 						a
 							color _cleargreen
+			.fitness-education
+				h3
+					font-size 1.5rem
+					padding-bottom 1rem
+				p
+					font-size .8rem
+					line-height 1.5rem
+					margin-bottom 1rem
+			.cuadrado
+				width 35rem
+				height 20rem
+				background-color #545454
+
+
+			.trainer-profile
+				display block
+				&__row
+					margin 2rem 0 1rem 0
+					.trainer-profile__description, .trainer-profile__opinion
+						display inline-block
+						vertical-align top
+					.trainer-profile__description
+						width 68%
+						maring right 2%
+
+						.trainer-picture, .trainer-about
+							display inline-block
+							vertical-align top
+						.trainer-picture
+							width 33%
+							margin-right 4%
+							max-height	17rem
+							&__img
+								background-color _darkblue
+								height 12.5rem
+							&__title
+								background-color _darkbluemore
+								color _clearbluemore
+								font-size 1.5rem
+								text-transform uppercase
+								text-align center
+								padding 1rem 0
+						.trainer-about
+							width 62%
+							h2
+								font-size 1.5rem
+								padding-bottom 1rem
+							p
+								font-size .8rem
+								line-height 1.5rem
+								padding-bottom 1rem
+
+					.trainer-profile__opinion
+						width 30%
+						.name-author
+							h2
+								font-size 1.5rem
+								padding-bottom 1rem
+						.opinion
+							p
+								padding 1.5rem
+								font-size .8rem
+								line-height 1.6rem
+								position relative
+								border 2px solid _darkbluemore
+								border-radius 5px
+							p::after
+								content ""
+								width 0
+								height 0
+								position absolute
+								border-top 13px solid _white
+								border-right 18px solid transparent
+								border-bottom 13px solid transparent
+								border-left 18px solid _white
+								bottom -25px
+								left 55px
+							p::before
+								content ""
+								width 0
+								height 0
+								position absolute
+								border-top 14px solid _darkbluemore
+								border-right 19px solid transparent
+								border-bottom 14px solid transparent
+								border-left 19px solid _darkbluemore
+								bottom -29px
+								left 53px
+						.author
+							font-size 1rem
+							margin-top 1.7rem
+							p
+								color _cleargreen
+								text-transform uppercase
+								font-weight 900
+								font-size .8rem
+
+					.charts-experience
+						h2
+							font-size 1.5rem
+							padding-bottom 1rem
+						.charts-donas
+							display inline-block
+							margin-right 2rem
+							width 21.4%
+							&:last-child
+								margin-right 0
+							&__containers
+								height	7.8rem
+								border 1px solid red
+								margin-bottom 1rem
+							&__description
+								text-align center
+								h3
+									padding-bottom .5rem
+									font-size 1.4rem
+								p
+									font-size .8rem
+									line-height 1.5rem
+									padding-bottom 1rem
+						.charts-barr
+							height 15rem
+							width 23rem
+							border 1px solid red
+							margin-bottom 2rem
+						.charts-line
+							height 15rem
+							border 1px solid red
+							margin-bottom 2rem
+						.charts-pie
+							display inline-block
+							width 48%
+							margin-right 2%
+							&__containers
+								height 10rem
+								border 1px solid red
+								margin-bottom 2rem
+							&__description
+								font-size .8rem
+								line-height 1.5rem
+								text-align center
+
+					.right, .left
+						display inline-block
+						vertical-align top
+					.left
+						width 65%
+						margin-right 2%
+					.right
+						width 30%
+
 			.format-classes
 				display block
 				.classes
@@ -498,7 +649,6 @@ body
 								&:hover
 									background-color _white
 									color _darkgreen
-
 				.rows
 					border 0px solid blue
 					margin-bottom 2rem
@@ -946,6 +1096,13 @@ body
 									width 100%
 									max-height 70px
 									border 1px solid blue
+	.right, .left
+		display inline-block
+		vertical-align top
+		width 48%
+	.left
+		margin-right 1.5%
+
 
 .about-company
 	background-color _bg-about
